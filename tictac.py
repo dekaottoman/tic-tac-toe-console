@@ -97,7 +97,7 @@ def play():
     turn_count = 0
     turn = "X"
     print("WELCOME TO TIC TAC TOE!!!")
-    print("(by @dekaottoman)\n")
+    print("(by @dekaottoman, type 'exit' to exit)\n")
     while game:
         display_table()
         insert(turn)
@@ -107,28 +107,28 @@ def play():
         if check_win_h():
             display_table()
             print(turn + " Wins !!!")
-            game = False
+            input()
             exit(0)
 
         #Win check (Vertical)
         if check_win_v():
             display_table()
             print(turn + " Wins !!!")
-            game = False
+            input()
             exit(0)
 
         #Win check (Diagonal)
         if check_win_d():
             display_table()
             print(turn + " Wins !!!")
-            game = False
+            input()
             exit(0)
 
         #Draw check
         if check_draw(turn_count):
             display_table()
             print("Draw !!!")
-            game = False
+            input()
             exit(0)
 
         if(turn == "X"):
